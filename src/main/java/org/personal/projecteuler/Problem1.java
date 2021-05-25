@@ -39,7 +39,7 @@ public class Problem1 {
      * Find the sum of all factors of 3, 5, and 15 less than the number
      * @update - This originally iterated through all multiples of 3 or 5 and added them together. 
      *      I used an interesting mathematical relationship shown below to update this method, and 
-     *      the program does run faster, around 0.01s on average. Not much, but enough to make me feel it was worthwhile.
+     *      the program does run faster, around 0.01s (10% less time) on average. Not much, but enough to make me feel it was worthwhile.
      * @reasoning - The multiples of 3 appear in the following forms:
      *      3 + 6 + 9 + 12 + 15 + ... + 3n = 3 * (1 + 2 + 3 + 4 + 5 + ... + n)
      *      We can use a formula for the sum of an arithmetic sequence, number of terms * (first term + last term) / 2.
@@ -53,6 +53,7 @@ public class Problem1 {
      * @evidence - 3 + 6 + 9 = 18 = (9+3)/ 2 * 3 = 3 * 3 * (4/2) = 18. 
      */
     //TODO: Add a formal proof for the formula of the sum of arithematic sequences in the evidence section. 
+    //TODO: Use divisibility rules to further improve runtime. 
     public static double multiplesOf3Or5(double range) {
         double maxFactorOf3 = 0.0; 
         double maxFactorOf5 = 0.0; 
