@@ -29,6 +29,7 @@ package org.personal.projecteuler;
  * or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of
  * all the multiples of 3 or 5 below 1000.
  */
+
 public class Problem1 {
 
     public static void main(String[] args) {
@@ -52,8 +53,10 @@ public class Problem1 {
      *      This is because the current value overcounts by one multiples of 15 (one each from the multiples of 3 and 5).
      * @evidence - 3 + 6 + 9 = 18 = (9+3)/ 2 * 3 = 3 * 3 * (4/2) = 18. 
      */
+    
     //TODO: Add a formal proof for the formula of the sum of arithematic sequences in the evidence section. 
     //TODO: Use divisibility rules to further improve runtime. 
+    
     public static double multiplesOf3Or5(double range) {
         double maxFactorOf3 = 0.0; 
         double maxFactorOf5 = 0.0; 

@@ -37,7 +37,6 @@ public class Problem3 {
         System.out.println(largestPrimeFactor(600851475143.0));
     }
     
-    
     /**
      * Iterate through all odd numbers between 3 and n, finding the greatest prime factor
      * @reasoning - All even numbers but 2 are not prime, so they don't have to be evaluated.
@@ -46,6 +45,7 @@ public class Problem3 {
      * @evidence - Using the example, dividing out 5, 7, and 13 from 13195, one is left with simply 29. 
      *          Dividing it by 29 confirms that it is the largest prime factor. 
      */
+    
     public static double largestPrimeFactor(double n) {
         double primeFactor = 3.0;
         double maxPrimeFactor = 0.0; 

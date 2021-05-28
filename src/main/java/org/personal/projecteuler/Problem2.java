@@ -31,6 +31,7 @@ package org.personal.projecteuler;
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
  * find the sum of the even-valued terms.
  */
+
 public class Problem2 {
 
     public static void main(String args[]) {
@@ -45,7 +46,9 @@ public class Problem2 {
      *      34 = 4(8) + 2 and 144 = 4(34) + 8. 
      * 
      */
+    
     //TODO: Write a formal proof for this. 
+    
     public static int evenFibSum(int maxVal) {
         int firstVal = 2;           //Equivalent to F(n-2)
         int secondVal = 8;          //Equivalent to 4F(n-1)
