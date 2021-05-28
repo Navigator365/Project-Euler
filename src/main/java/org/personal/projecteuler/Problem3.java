@@ -23,8 +23,7 @@
  */
 package org.personal.projecteuler;
 
-/**
- *
+/*
  * @author Benjamin Dodge
  * @problem - The prime factors of 13195 are 5, 7, 13 and 29.
  * What is the largest prime factor of the number 600851475143 ?
@@ -39,11 +38,12 @@ public class Problem3 {
     
     /**
      * Iterate through all odd numbers between 3 and n, finding the greatest prime factor
+     * 
      * @reasoning - All even numbers but 2 are not prime, so they don't have to be evaluated.
      *      Whenever a prime factor is found, divide it out to reduce runtime. 
      *      The greatest prime factor is found when dividing the input number by it results in 1. 
      * @evidence - Using the example, dividing out 5, 7, and 13 from 13195, one is left with simply 29. 
-     *          Dividing it by 29 confirms that it is the largest prime factor. 
+     *      Dividing it by 29 confirms that it is the largest prime factor. 
      */
     
     public static double largestPrimeFactor(double n) {

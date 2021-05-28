@@ -40,6 +40,7 @@ public class Problem2 {
 
     /**
      * Iterate through a series defined by a recursive function
+     * 
      * @reasoning - The even values of the Fibonacci series form the following 
      *      recursive function: F(n) = 4F(n-1) + F(n-2)
      * @evidence - Take the sequence 2, 8, 34, 144 of the Fibonacci series.

@@ -38,6 +38,7 @@ public class Problem1 {
 
     /**
      * Find the sum of all factors of 3, 5, and 15 less than the number
+     * 
      * @update - This originally iterated through all multiples of 3 or 5 and added them together. 
      *      I used an interesting mathematical relationship shown below to update this method, and 
      *      the program does run faster, around 0.01s (10% less time) on average. Not much, but enough to make me feel it was worthwhile.

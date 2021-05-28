@@ -24,7 +24,6 @@
 package org.personal.projecteuler;
 
 /**
- *
  * @author Bengamin Dodge
  * @problem - A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
  * Find the largest palindrome made from the product of two 3-digit numbers.
@@ -55,11 +54,18 @@ public class Problem4 {
    }
    
    /**
-    * Iterates through numbers of a given digit length that are multiples of 11, from largest to smallest
-    * @param nDigits
-    * @return 
+    * Iterates through numbers of a given digit length that are multiples of 11, from largest to smallest to find the largest palindrome formed by the product of two of these numbers
+    * 
+    * @reasoning - First, we're looking for the largest palindrome, which will be produced by the product of larger numbers, so we sort from larger to smaller. 
+    *       Second, all palindromes are divisible by 11. 
+    *       Proof: Take a palindrome formed by the product of two three-digit numbers (note that the length of the palindrome doesn't matter).
+    *       It can be expressed in the form 100000x+10000y+1000z+100z+10y+x, with x, y, and z being single digits which don't have to be distinct
+    *       This can be simplified to 100001x+10010y+1100z, or 11(9091x+910y+100z), so it will always be divisible by 11, regardless of the values of x, y, and z.
+    *       Therefore, at least one of the two values multiplied to give a palindrome must be divisible by 11. If one is not, we know that the other must be.
+    * @evidence - 9009 / 11 = 819, and one of its two double-digit factors, 99, is also divisible by 11. (99/11 = 9)
     */
    
+   //TODO: Find a more efficient method of sorting through multiples of 11
    public static int palindromicNumberFromDigits(int nDigits) {
        int largestPalindrome = 0;                         //Variable initialization
        int maxValue = 99; 
