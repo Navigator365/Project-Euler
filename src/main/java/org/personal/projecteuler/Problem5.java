@@ -40,13 +40,15 @@ public class Problem5 {
     }
 
     /**
-     * Millennia-old algorithm for finding all prime numbers below a limit by marking all composite numbers and their multiples, leaving only primes unmarked
-     * See Wikipedia here: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-     * 
+     * Millennia-old algorithm for finding all prime numbers below a limit by
+     * marking all composite numbers and their multiples, leaving only primes
+     * unmarked See Wikipedia here:
+     * https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+     *
      * Note: Obviously not my own idea, but my own implementation of the idea
-     * 
-     * @param n - number used to find all primes below it 
-     * @return list of all prime numbers less than the input n 
+     *
+     * @param n - number used to find all primes below it
+     * @return list of all prime numbers less than the input n
      */
     public static List<Integer> sieveOfEratosthenes(int n) {
         boolean prime[] = new boolean[n + 1];       //Create a new boolean array with indexes from 0 to the number 
@@ -68,18 +70,31 @@ public class Problem5 {
     }
 
     /**
-     * Iterating through a list of prime factors of a number, this program finds their corresponding exponents to find the minimum possible number divisible by all positive integers less than the limit
-     * 
-     * @reasoning - First, the lowest possible number (lpn) divisible by all integers less than a given limit must be divisible by the maximum power of a prime factor of the numbers in the sequence. 
-     *      For example, for the sequence 1-8, the lpn must be divisible by 8, or 2^3. However, in order for this number to be the lowest possible, it can only have an exponent of 3 for 2:
-     *      any greater, and the number has an unneeded factor of 2. To find the appropriate exponent, we first seek to find the exponent that results in a given prime number p equaling the limit.
-     *      We have p ^ x power = limit. We can use logarithmic properties to convert the equation into xlog(p) = log(limit). (Notice the application of the power rule). Continuing onward, 
-     *      we have x = log(limit)/log(p). Since we want an integer factor, we want an integer exponent, so we take the floor of that expression. Every prime number, raised to that power, will 
-     *      result in the minimum possible number of a given prime factor for the product of all such numbers to be the lpn. 
-     * @evidence - For 1-10, we have the primes 2, 3, 5, and 7. We then find the largest powers of prime factors, found in 8 = 2^3 and 9 = 3^2. No other number in this sequence is composed of a prime number raised 
-     *      to a power greater than 1, so our answer is the product of 2^3, 3^2, 5, and 7, resulting in 2520, the correct answer given in the problem. 
+     * Iterating through a list of prime factors of a number, this program finds
+     * their corresponding exponents to find the minimum possible number
+     * divisible by all positive integers less than the limit
+     *
+     * @reasoning - First, the lowest possible number (lpn) divisible by all
+     * integers less than a given limit must be divisible by the maximum power
+     * of a prime factor of the numbers in the sequence. For example, for the
+     * sequence 1-8, the lpn must be divisible by 8, or 2^3. However, in order
+     * for this number to be the lowest possible, it can only have an exponent
+     * of 3 for 2: any greater, and the number has an unneeded factor of 2. To
+     * find the appropriate exponent, we first seek to find the exponent that
+     * results in a given prime number p equaling the limit. We have p ^ x power
+     * = limit. We can use logarithmic properties to convert the equation into
+     * xlog(p) = log(limit). (Notice the application of the power rule).
+     * Continuing onward, we have x = log(limit)/log(p). Since we want an
+     * integer factor, we want an integer exponent, so we take the floor of that
+     * expression. Every prime number, raised to that power, will result in the
+     * minimum possible number of a given prime factor for the product of all
+     * such numbers to be the lpn.
+     * @evidence - For 1-10, we have the primes 2, 3, 5, and 7. We then find the
+     * largest powers of prime factors, found in 8 = 2^3 and 9 = 3^2. No other
+     * number in this sequence is composed of a prime number raised to a power
+     * greater than 1, so our answer is the product of 2^3, 3^2, 5, and 7,
+     * resulting in 2520, the correct answer given in the problem.
      */
-    //Turning the equation primeP ^ x power = limit into xlog(primeP) = log(limit), or x = log(limit)/log(primeP).
     public static void smallestAbsoluteDivisor(int limit) {
         int finalNumber = 1;
         int counter = 0;
